@@ -1,0 +1,230 @@
+/* Geral */ 
+
+*{
+    padding: 0;
+    margin: 0; 
+    font-family: Georgia; 
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #444;
+    transition: 0.4s;
+}
+
+a:hover {
+    color: #37a1f7;
+}
+
+/* Navbar */ 
+
+#navbar {
+    padding: 1.5rem 2.5rem;
+    border-bottom: 2px solid #ddd;
+}
+
+#navbar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+#nav-links {
+    display: flex; 
+    gap: 1rem;
+}
+
+/* conteúdo principal */ 
+.container {
+    display: flex;
+    gap: 3rem; 
+    padding: 2rem 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#posts-container {
+    flex: 3 1 0;
+}
+
+.post {
+    margin-bottom: 2.5rem;
+}
+
+.post img {
+    width: 100%;
+    height: auto; /* Garantindo que as imagens se ajustem ao tamanho */
+    max-height: 500px; /* Definindo uma altura máxima */
+    object-fit: contain; /* Faz com que a imagem mantenha as proporções */
+    margin-bottom: 1rem;
+}
+
+.title, 
+.description, 
+.author {
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 2rem;
+}
+
+.author {
+    color: #333;
+    font-weight: bold;
+}
+
+/* barra lateral */
+
+#sidebar {
+    flex: 1 1 0;
+}
+
+#search-bar, 
+#categories, 
+#tags {
+    padding: 1.5rem;
+    border: 1px solid #ddd; 
+    margin-bottom: 1rem;
+}
+
+#search-bar h4, 
+#categories h4, 
+#tags h4 {
+    margin-bottom: 1.5rem; 
+    font-size: 1.6rem;
+}
+
+#search-bar form {
+    display: flex;
+}
+
+#search-bar input {
+    padding: 0.5rem 1rem; 
+    border: 1px solid #ddd;
+}
+
+#search-bar input[type="submit"] {
+    cursor: pointer;
+    background-color: #37a1f7;
+    color: #FFF;
+    border: none;
+}
+
+#categories li {
+    margin-bottom: 1rem;
+}
+
+#tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+#tags-container a {
+    background-color: #ddd;
+    padding: 0.5rem 0.7rem;
+    border-radius: 0.3rem;
+}
+
+/* Estilo do Modal */
+.modal {
+    display: none; /* Esconde o modal por padrão */
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); /* Fundo com opacidade */
+}
+
+
+/* Estilos para o modal */
+.modal {
+    display: none; /* Oculto por padrão */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro */
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-window {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+}
+
+.modal-content {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+/* Classe para imagem ampliada */
+.modal-content.zoomed {
+    transform: scale(1.9); /* Aumenta a imagem em 1.5x */
+    cursor: zoom-out; /* Indica ao usuário que ele pode "des-zoomar" */
+}
+
+.zoom-btn {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
+/* Rodapé */ 
+#footer {
+    border-top: 2px solid #ddd;
+    padding: 3rem; 
+    text-align: center;
+}
+
+#footer h2, 
+#footer p {
+    margin-bottom: 1rem;
+}
+
+/* Responsivo */ 
+
+@media (max-width: 450px) {
+    .container {
+        flex-wrap: wrap;
+    }
+    
+    /* Ajustar o tamanho das imagens no mobile */
+    .post img {
+        max-width: 100%;
+        height: auto;
+    }
+}
